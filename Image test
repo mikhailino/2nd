@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Interaction</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .image-container {
+            margin-bottom: 20px;
+        }
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-container">
+        <img src="https://via.placeholder.com/300" alt="Sample Image" id="image">
+    </div>
+    <div class="buttons-container">
+        <button onclick="handleChoice('left')">Option Left</button>
+        <button onclick="handleChoice('right')">Option Right</button>
+    </div>
+</div>
+
+<script>
+    function handleChoice(choice) {
+        const imageSrc = document.getElementById('image').src;
+        console.log(`Image: ${imageSrc}, Choice: ${choice}`);
+    }
+</script>
+
+</body>
+</html>
